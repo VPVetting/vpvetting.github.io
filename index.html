@@ -153,14 +153,13 @@
              //游标请求成功
             getAllrequest.onsuccess = () => {
                 console.log(getAllrequest.result);
+                console.log(getAllrequest.result.length);
             };
 
             }
             )
     }
 
-    console.log(dbName)
-    console.log(version)
     initDB(dbName,version);
 </script>
  
