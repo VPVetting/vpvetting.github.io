@@ -146,6 +146,7 @@
         let request=openDB(dbName,version).then((db)=>{
             let store=db.transaction(dbName,'readwrite').objectStore(dbName);
             let index=store.index("gamename");
+            console.log(inputs[1].value)
             let result=index.getall(inpusts[1].value)
              //游标请求成功
             console.log(result)
