@@ -148,8 +148,11 @@
             let index=store.index("gamename");
             let name=inputs[1].value
             console.log(inputs[1].value)
-            let result=index.getAll(name)
+            let getAllrequest=index.getAll(name)
              //游标请求成功
+            getAllrequest.onsuccess = () => {
+                console.log(getAllrequest.result);
+            };
             console.log(result);
             console.log(result.result);
             console.log(result.id);
