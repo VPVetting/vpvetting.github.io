@@ -117,9 +117,9 @@
             }
         })
     }
-    var version=1;
-    var dbName="vr_pps";
-    var db;
+    let version=1;
+    let dbName="vr_pps";
+    let db;
 
     //初始化DB，写入VR_PP数据信息
     function initDB(dbName,version){
@@ -159,7 +159,8 @@
             )
     }
 
-    
+    console.log(dbName)
+    console.log(version)
     initDB(dbName,version);
 </script>
  
