@@ -143,20 +143,12 @@
     // 查询vr_pp
     function query(dbName,version){
         tbody.innerHTML=''
-        for(let i of inputs){
-            console.log(i.value)
-        }
-        console.log(inputs.length)
-        console.log(inputs[0].value)
-        console.log(inputs[1].value)
-        console.log(inputs[2].value)
         let request=openDB(dbName,version).then((db)=>{
             let store=db.transaction(dbName,'readwrite').objectStore(dbName);
             let index=store.index("gamename");
-            let result=index.getall("")
+            let result=index.getall(inpusts[1].value)
              //游标请求成功
-
-
+            console.log(result)
             }
             )
     }
