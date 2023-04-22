@@ -117,6 +117,9 @@
             }
         })
     }
+    var version=1;
+    var dbName="vr_pps";
+    var db;
 
     //初始化DB，写入VR_PP数据信息
     function initDB(dbName,version){
@@ -136,9 +139,7 @@
         })
     }
 
-    var version=1;
-    var dbName="vr_pps";
-    var db;
+    
 
     // 查询vr_pp
     function query(dbName,version){
