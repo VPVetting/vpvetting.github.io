@@ -152,8 +152,13 @@
             let getAllrequest=index.getAll(name)
              //游标请求成功
             getAllrequest.onsuccess = () => {
-                console.log(getAllrequest.result);
-                console.log(getAllrequest.result.length);
+                result=getAllrequest.result
+                for(i=0;i<result.length;++i){
+                    console.log(result[i].id)
+                    console.log(result[i].manufter)
+                    console.log(result[i].gamename)
+                    console.log(result[i].version)
+                }
             };
 
             }
