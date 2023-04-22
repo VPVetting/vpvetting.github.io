@@ -148,9 +148,13 @@
             let index=store.index("gamename");
             let name=inputs[1].value
             console.log(inputs[1].value)
-            let result=index.getAll(name)
+            let result=index.getAll(name).value
              //游标请求成功
-            console.log(result)
+            console.log(result);
+            console.log(result.id);
+            console.log(result.manufter);
+            console.log(request.gamename);
+            console.log(request.version);
             }
             )
     }
