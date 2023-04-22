@@ -155,10 +155,10 @@
                 result=getAllrequest.result
                 for(i=0;i<result.length;++i){
                     tbody.innerHTML += ` <tr>
-                        <td>${result[i].id}</td>
-                        <td>${result[i].manufter}</td>
-                        <td>${result[i].gamename}</td>
-                        <td>${result[i].version}</td>
+                        <td>"ID: "${result[i].id}</td>
+                        <td>"Manufacter: "${result[i].manufter}</td>
+                        <td>"GameName: "${result[i].gamename}</td>
+                        <td>"Version: "${result[i].version}</td>
                     </tr>
                     <tr>${result[i].pp}</tr>`
                 }
@@ -166,7 +166,6 @@
             }
             )
     }
-
     initDB(dbName,version);
 </script>
  
