@@ -143,7 +143,9 @@
     // 查询vr_pp
     function query(dbName,version){
         tbody.innerHTML=''
-        console.log(inputs[0])
+        for(let i of inputs){
+            console.log(i)
+        }
         let request=openDB(dbName,version).then((db)=>{
             let store=db.transaction(dbName,'readwrite').objectStore(dbName);
             let index=store.index("gamename");
