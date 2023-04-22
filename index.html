@@ -154,13 +154,16 @@
             getAllrequest.onsuccess = () => {
                 result=getAllrequest.result
                 for(i=0;i<result.length;++i){
-                    console.log(result[i].id)
-                    console.log(result[i].manufter)
-                    console.log(result[i].gamename)
-                    console.log(result[i].version)
+                    tbody.innerHTML += ` <tr>
+                        <th scope="row">${value.sid}</th>
+                        <td>${result[i].id}</td>
+                        <td>${result[i].manufter}</td>
+                        <td>${result[i].gamename}</td>
+                        <td>${result[i].version}</td>
+                    </tr>
+                    <tr>${result[i].pp}</tr>`
                 }
             };
-
             }
             )
     }
