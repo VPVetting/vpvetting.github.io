@@ -144,7 +144,7 @@
     function query(dbName,version){
         tbody.innerHTML=''
         for(let i of inputs){
-            console.log(i)
+            console.log(i.value)
         }
         let request=openDB(dbName,version).then((db)=>{
             let store=db.transaction(dbName,'readwrite').objectStore(dbName);
