@@ -203,9 +203,9 @@
         bool = true//更新开启
         let result = openDB().then((db) => {
             //开启事务
-            let tx = db.transaction('students', "readwrite");
+            let tx = db.transaction('vr_pps', "readwrite");
             //获取对象仓库
-            let store = tx.objectStore('students');
+            let store = tx.objectStore('vr_pps');
             let obj = store.get(sid * 1)//拿到点击数据对象
             obj.onsuccess = () => {
                 //将数据放在input里
@@ -222,9 +222,9 @@
         let sid = e.target.parentNode.parentNode.children[0].innerHTML//获取key值
         let result = openDB().then((db) => {
             //开启事务
-            let tx = db.transaction('students', "readwrite");
+            let tx = db.transaction('vr_pps', "readwrite");
             //获取对象仓库
-            let store = tx.objectStore('students');
+            let store = tx.objectStore('vr_pps');
             let delReq = store.delete(sid * 1)//删除数据
             delReq.onsuccess = () => {
                 //更新数据
