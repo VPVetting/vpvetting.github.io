@@ -246,7 +246,7 @@
     }
 
     function select_manu() {
-      var vs = $("select option:selected").val();
+      var vs = this.options[this.options.selectedIndex].value;
       console.log("In select_manu:");
       console.log(vs);
     }
