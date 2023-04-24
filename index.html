@@ -73,12 +73,7 @@
   <script>
     //获取所有input盒子
     const inputs = document.querySelectorAll("select");
-    console.log(inputs);
-    console.log(inputs.length);
-    for (i = 0; i < inputs.length; i++) {
-      console.log(inputs[i]);
-    }
-    console.log("@@@@@@@");
+    for (i = 0; i < inputs.length; i++) {}
     let tbody = document.querySelector(".tbody"); //获取元素
     let bool = false; //控制更新阀门
     let sid = ""; //存储 key值
@@ -259,7 +254,9 @@
         let getAllrequest = index.getAll(selected_manu);
         //游标请求成功
         var gamename_sel = document.getElementById("gamename");
-        gamename_sel.innerHTML = ``;
+        gamename_sel.innerHTML = `<option value="" disabled selected hidden>
+          --Please select GameName--
+        </option>`;
         getAllrequest.onsuccess = () => {
           result = getAllrequest.result;
           manu_res = result;
@@ -275,16 +272,13 @@
       var nSel = document.getElementById("gamename");
       index = nSel.selectedIndex;
       var selected_game = nSel[index].text;
-      console.log(selected_game);
       if (manu_res != null) {
-        result_game = manu_res[index];
+        result_game = manu_res[index - 1];
       }
     }
     // 查询vr_pp
     function query(dbName, version) {
-      console.log("In query():");
-      console.log(manu_res);
-      console.log(manu_res[0]);
+      tbody.innerHTML = ``;
       if (result_game != null) {
         tbody.innerHTML += ` <tr>
           <td>"ID: "${result_game.id}</td>
