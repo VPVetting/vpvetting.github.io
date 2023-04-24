@@ -77,6 +77,10 @@
     //获取所有input盒子
     const inputs = document.querySelectorAll("select");
     console.log(inputs);
+    console.log(inputs.length);
+    for (i = 0; i < inputs.length; i++) {
+      console.log(inputs[i]);
+    }
     console.log("@@@@@@@");
     let tbody = document.querySelector(".tbody"); //获取元素
     let bool = false; //控制更新阀门
