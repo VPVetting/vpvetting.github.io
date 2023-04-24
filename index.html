@@ -246,11 +246,25 @@
     }
 
     function select_manu() {
-      var selected_manu = document.getElementById("manufter");
-      index = selected_manu.selectedIndex;
-      console.log("In select_manu:");
-      console.log(selected_manu[index].text);
-      console.log(selected_manu[index].value);
+      var nSel = document.getElementById("manufter");
+      index = nSel.selectedIndex;
+      var selected_manu = nSel[index].text;
+      let request = openDB(dbName, version).then((db) => {
+        let store = db.transaction(dbName, "readwrite").objectStore(dbName);
+        let index = store.index("manufter");
+        let getAllrequest = index.getAll(selected_manu);
+        //游标请求成功
+        var gamename_sel = document.getElementById("gamename");
+        gamename_sel.innerHTML = ``;
+        getAllrequest.onsuccess = () => {
+          result = getAllrequest.result;
+          for (i = 0; i < result.length; ++i) {
+            gamename_sel.innerHTML += `
+            <option value="${result[i].gamename}">${result[i].gamename}</option>
+            `;
+          }
+        };
+      });
     }
     // 查询vr_pp
     function query(dbName, version) {
