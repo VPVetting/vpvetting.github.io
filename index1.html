@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../lib/bootstrap.css" />
+  </head>
+  <style>
+    .container {
+      width: 1000px;
+    }
+
+    .info {
+      margin-top: 20px;
+    }
+
+    .itemList {
+      margin-left: 50px;
+    }
+
+    .item {
+      margin-top: 5px;
+    }
+
+    .info .btn-info {
+      width: 70px;
+      margin: 10px 0 10px 130px;
+    }
+
+    .btn-success {
+      margin-bottom: 5px;
+    }
+  </style>
+
+  <body>
+    <div class="container">
+      <fieldset class="info">
+        <legend>VR Privacy Policy Analysis</legend>
+        <div class="itemList">
+          <div class="item">
+            <label for="manufter">Manufacturer: </label>
+            <select onchange="select_manu()" name="" id="manufter">
+              <option value="" disabled selected hidden>
+                --Please select Manufacturer--
+              </option>
+              <option value="Manufacturer1">test_manufter0</option>
+              <option value="Manufacturer2">test_manufter1</option>
+              <option value="Manufacturer3">test_manufter2</option>
+              <option value="Manufacturer4">test_manufter3</option>
+            </select>
+          </div>
+          <div class="item">
+            <label for="gamename">GameName: </label>
+            <select onchange="select_name()" name="" id="gamename">
+              <option value="" disabled selected hidden>
+                --Please select GameName--
+              </option>
+            </select>
+          </div>
+        </div>
+        <button class="btn btn-info" onclick="query('vr_pps',1)">Query</button>
+      </fieldset>
+      <a></a>
+      <div class="show">
+        <table class="table table-striped table-dark">
+          <tbody class="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script>
+    //获取所有input盒子
+    const inputs = document.querySelectorAll("select");
+    for (i = 0; i < inputs.length; i++) {}
+    let tbody = document.querySelector(".tbody"); //获取元素
+    let bool = false; //控制更新阀门
+    let sid = ""; //存储 key值
+    var vrpp_lis = [
+      {
+        id: 0,
+        manufter: "test_manufter0",
+        gamename: "test_name0",
+        version: "test_version0",
+        pp: "test_pp0",
+      },
+      {
+        id: 1,
+        manufter: "test_manufter1",
+        gamename: "test_name1",
+        version: "test_version1",
+        pp: "test_pp1",
+      },
+      {
+        id: 2,
+        manufter: "test_manufter2",
+        gamename: "test_name2",
+        version: "test_version2",
+        pp: "test_pp2",
+      },
+      {
+        id: 3,
+        manufter: "test_manufter3",
+        gamename: "test_name3",
+        version: "test_version3",
+        pp: "test_pp3",
+      },
+      {
+        id: 4,
+        manufter: "test_manufter4",
+        gamename: "test_name4",
+        version: "test_version4",
+        pp: "test_pp4",
+      },
+      {
+        id: 5,
+        manufter: "test_manufter5",
+        gamename: "test_name5",
+        version: "test_version5",
+        pp: "test_pp5",
+      },
+      {
+        id: 6,
+        manufter: "test_manufter6",
+        gamename: "test_name6",
+        version: "test_version6",
+        pp: "test_pp6",
+      },
+      {
+        id: 7,
+        manufter: "test_manufter7",
+        gamename: "test_name7",
+        version: "test_version7",
+        pp: "test_pp7",
+      },
+      {
+        id: 8,
+        manufter: "test_manufter8",
+        gamename: "test_name8",
+        version: "test_version8",
+        pp: "test_pp8",
+      },
+      {
+        id: 9,
+        manufter: "test_manufter9",
+        gamename: "test_name9",
+        version: "test_version9",
+        pp: "test_pp9",
+      },
+      {
+        id: 10,
+        manufter: "test_manufter10",
+        gamename: "test_name10",
+        version: "test_version10",
+        pp: "test_pp10",
+      },
+      {
+        id: 11,
+        manufter: "test_manufter11",
+        gamename: "test_name11",
+        version: "test_version11",
+        pp: "test_pp11",
+      },
+      {
+        id: 12,
+        manufter: "test_manufter12",
+        gamename: "test_name12",
+        version: "test_version12",
+        pp: "test_pp12",
+      },
+      {
+        id: 13,
+        manufter: "test_manufter13",
+        gamename: "test_name13",
+        version: "test_version13",
+        pp: "test_pp13",
+      },
+      {
+        id: 14,
+        manufter: "test_manufter14",
+        gamename: "test_name14",
+        version: "test_version14",
+        pp: "test_pp14",
+      },
+    ];
+
+    //打开数据库
+    function openDB(dbname, version) {
+      let db = null;
+      let req = indexedDB.open(dbName, version);
+
+      return new Promise((resolve, reject) => {
+        req.onerror = () => {
+          console.log("Error!");
+          reject("Error!");
+        };
+        req.onsuccess = (e) => {
+          db = e.target.result;
+          console.log("Open Successfully");
+          resolve(db);
+        };
+        req.onupgradeneeded = (e) => {
+          db = e.target.result;
+          if (!db.objectStoreNames.contains("vr_pps")) {
+            //返回对象仓库
+            let store = db.createObjectStore("vr_pps", {
+              keyPath: "id",
+              autoIncrement: true,
+            });
+            //创建索引
+            store.createIndex("id", "id", { unique: true });
+            store.createIndex("manufter", "manufter", { unique: false });
+            store.createIndex("gamename", "gamename", { unique: false });
+            store.createIndex("version", "version", { unique: false });
+            store.createIndex("pp", "pp", { unique: false });
+            console.log("Create Successfully");
+          }
+        };
+      });
+    }
+    let version = 1;
+    let dbName = "vr_pps";
+    let db;
+    let manu_res = null;
+    result_game = null;
+
+    //初始化DB，写入VR_PP数据信息
+    function initDB(dbName, version) {
+      let result = openDB(dbName, version).then((db) => {
+        let request = db.transaction(dbName, "readwrite").objectStore(dbName);
+        for (i = 0; i < vrpp_lis.length; ++i) {
+          result = request.add(vrpp_lis[i]);
+          result.onsuccess = function (e) {
+            console.log("Add Successfully!");
+          };
+          result.onerror = function (e) {
+            console.log("Fail to add!");
+          };
+        }
+        db.close();
+      });
+    }
+
+    function select_manu() {
+      var nSel = document.getElementById("manufter");
+      index = nSel.selectedIndex;
+      console.log(index);
+      var selected_manu = nSel[index].text;
+      console.log(selected_manu);
+      let request = openDB(dbName, version).then((db) => {
+        let store = db.transaction(dbName, "readwrite").objectStore(dbName);
+        let index = store.index("manufter");
+        let getAllrequest = index.getAll(selected_manu);
+        //游标请求成功
+        var gamename_sel = document.getElementById("gamename");
+        gamename_sel.innerHTML = `<option value="" disabled selected hidden>
+          --Please select GameName--
+        </option>`;
+        getAllrequest.onsuccess = () => {
+          result = getAllrequest.result;
+          manu_res = result;
+          for (i = 0; i < result.length; ++i) {
+            gamename_sel.innerHTML += `
+            <option value="${result[i].gamename}">${result[i].gamename}</option>
+            `;
+          }
+        };
+      });
+    }
+    function select_name() {
+      var nSel = document.getElementById("gamename");
+      index = nSel.selectedIndex;
+      var selected_game = nSel[index].text;
+      if (manu_res != null) {
+        result_game = manu_res[index - 1];
+      }
+    }
+    // 查询vr_pp
+    function query(dbName, version) {
+      tbody.innerHTML = ``;
+      if (result_game != null) {
+        tbody.innerHTML += ` <tr>
+          <td>"ID: "${result_game.id}</td>
+          <td>"Manufacter: "${result_game.manufter}</td>
+          <td>"GameName: "${result_game.gamename}</td>
+          <td>"Version: "${result_game.version}</td>
+      </tr>
+      <tr>${result_game.pp}</tr>`;
+      }
+    }
+    initDB(dbName, version);
+  </script>
+</html>
