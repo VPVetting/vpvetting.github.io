@@ -279,6 +279,9 @@
     }
     // 查询vr_pp
     function query(dbName, version) {
+      console.log("In query():");
+      console.log(manu_res);
+      console.log(result_game);
       if (result_game != null) {
         tbody.innerHTML += ` <tr>
           <td>"ID: "${result_game.id}</td>
