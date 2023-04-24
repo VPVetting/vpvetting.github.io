@@ -250,6 +250,7 @@
     function select_manu() {
       var nSel = document.getElementById("manufter");
       index = nSel.selectedIndex;
+      console.log(index);
       var selected_manu = nSel[index].text;
       let request = openDB(dbName, version).then((db) => {
         let store = db.transaction(dbName, "readwrite").objectStore(dbName);
