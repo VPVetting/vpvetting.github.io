@@ -252,6 +252,7 @@
       index = nSel.selectedIndex;
       console.log(index);
       var selected_manu = nSel[index].text;
+      console.log(selected_manu);
       let request = openDB(dbName, version).then((db) => {
         let store = db.transaction(dbName, "readwrite").objectStore(dbName);
         let index = store.index("manufter");
