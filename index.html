@@ -227,6 +227,8 @@
     let version = 1;
     let dbName = "vr_pps";
     let db;
+    let manu_res = null;
+    result_game = null;
 
     //初始化DB，写入VR_PP数据信息
     function initDB(dbName, version) {
@@ -258,6 +260,7 @@
         gamename_sel.innerHTML = ``;
         getAllrequest.onsuccess = () => {
           result = getAllrequest.result;
+          manu_res = result;
           for (i = 0; i < result.length; ++i) {
             gamename_sel.innerHTML += `
             <option value="${result[i].gamename}">${result[i].gamename}</option>
@@ -266,29 +269,25 @@
         };
       });
     }
+    function select_name() {
+      var nSel = document.getElementById("gamename");
+      index = nSel.selectedIndex;
+      var selected_game = nSel[index].text;
+      if (manu_res != null) {
+        result_game = manu_res[index];
+      }
+    }
     // 查询vr_pp
     function query(dbName, version) {
-      tbody.innerHTML = "";
-      let request = openDB(dbName, version).then((db) => {
-        let store = db.transaction(dbName, "readwrite").objectStore(dbName);
-        let index = store.index("gamename");
-        let name = inputs[1].value;
-        console.log(inputs[1].value);
-        let getAllrequest = index.getAll(name);
-        //游标请求成功
-        getAllrequest.onsuccess = () => {
-          result = getAllrequest.result;
-          for (i = 0; i < result.length; ++i) {
-            tbody.innerHTML += ` <tr>
-                        <td>"ID: "${result[i].id}</td>
-                        <td>"Manufacter: "${result[i].manufter}</td>
-                        <td>"GameName: "${result[i].gamename}</td>
-                        <td>"Version: "${result[i].version}</td>
-                    </tr>
-                    <tr>${result[i].pp}</tr>`;
-          }
-        };
-      });
+      if (result_game != null) {
+        tbody.innerHTML += ` <tr>
+          <td>"ID: "${result_game.id}</td>
+          <td>"Manufacter: "${result_game.manufter}</td>
+          <td>"GameName: "${result_game.gamename}</td>
+          <td>"Version: "${result_game.version}</td>
+      </tr>
+      <tr>${result_game.pp}</tr>`;
+      }
     }
     initDB(dbName, version);
   </script>
