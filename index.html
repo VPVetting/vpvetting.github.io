@@ -247,11 +247,9 @@
 
     function select_manu() {
       var selected_manu = document.getElementById("manufter");
+      index = selected_manu.selectedIndex;
       console.log("In select_manu:");
-      console.log(selected_manu);
-      console.log(selected_manu.selectedIndex);
-      console.log(selected_manu);
-      console.log(selected_manu);
+      console.log(selected_manu[index]);
     }
     // 查询vr_pp
     function query(dbName, version) {
