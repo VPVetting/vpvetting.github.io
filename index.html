@@ -275,6 +275,7 @@
       var nSel = document.getElementById("gamename");
       index = nSel.selectedIndex;
       var selected_game = nSel[index].text;
+      console.log(selected_game);
       if (manu_res != null) {
         result_game = manu_res[index];
       }
@@ -283,7 +284,7 @@
     function query(dbName, version) {
       console.log("In query():");
       console.log(manu_res);
-      console.log(result_game);
+      console.log(manu_res[0]);
       if (result_game != null) {
         tbody.innerHTML += ` <tr>
           <td>"ID: "${result_game.id}</td>
