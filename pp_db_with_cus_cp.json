@@ -1,0 +1,79 @@
+[{
+  "_id": {
+    "$oid": "6444a06fd36fbaa6112dba39"
+  },
+  "idx": "0001",
+  "name": "1 multi screen media player gallery video wall photo slideshow wizard app",
+  "platform": "SteamVR",
+  "item_page_link": "https://store.steampowered.com/app/622290/1_multi_screen_media_player_gallery_video_wall_photo_slideshow_wizard_app/?snr=1_7_7_151_150_223\nhttps://store.steampowered.com/app/622290/1_multi_screen_media_player_gallery_video_wall_photo_slideshow_wizard_app/?snr=1_7_7_151_150_200",
+  "website_link": "https://AVOlight.com/",
+  "pp_link": "https://discord.com/privacy",
+  "publisher": "avolight",
+  "genres": "early access, video production, utilities, vr",
+  "description": "Surround yourself with multiple screens of image slideshows and video players. Try it out to see how it runs and what’s currently supported; if a feature you want isn't there, I hope you check back later.",
+  "price": "Paid",
+  "pp_components": "1st Collection, 3rd Sharing, User Choice, Data Security, Specific Audiences, User Access, Policy Change, Data Retention, Other",
+  "k_counterparts": [
+    [
+      1,
+      "2392",
+      "mermaidvr video player",
+      0.3978917598724365
+    ],
+    [
+      2,
+      "1602",
+      "gizmovr video player",
+      0.39369502663612366
+    ],
+    [
+      3,
+      "1020",
+      "deovr video player",
+      0.391886830329895
+    ],
+    [
+      4,
+      "2488",
+      "moon vr video player",
+      0.3437238037586212
+    ],
+    [
+      5,
+      "4380",
+      "viveport video",
+      0.3258655071258545
+    ],
+    [
+      6,
+      "0742",
+      "cinevr",
+      0.12910839915275574
+    ],
+    [
+      7,
+      "3466",
+      "slivertv",
+      0.1232784166932106
+    ],
+    [
+      8,
+      "4336",
+      "virtual desktop",
+      0.11952285468578339
+    ],
+    [
+      9,
+      "3574",
+      "spacesys",
+      0.08908707648515701
+    ],
+    [
+      10,
+      "4203",
+      "tvori",
+      0.08132500946521759
+    ]
+  ],
+  "cus": "ip addr, usage info, pii, geo location, audio, device info, browser type, phone num, usage info, information, information, information, email addr, user id, browsing, pii, usage info, identifier, billing, photo, usage info, hardware, network"
+}]

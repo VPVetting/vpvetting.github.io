@@ -56,51 +56,59 @@ https://templatemo.com/tm-564-plot-listing
             </div>
           </div>
           <div class="col-lg-12 align-self-center">
-            <div class="search-box">
-              <div class="row">
-                <div class="col-lg-4 align-self-center">
-                  <fieldset>
-                    <select
-                      name="manufter_select"
-                      class="form-select"
-                      aria-label="Area"
-                      id="manufter"
-                      onchange="select_manu()"
-                    >
-                      <option value="" disabled selected hidden>
-                        --Please select Manufacturer--
-                      </option>
-                      <option value="Manufacturer1">test_manufter0</option>
-                      <option value="Manufacturer2">test_manufter1</option>
-                      <option value="Manufacturer3">test_manufter2</option>
-                      <option value="Manufacturer4">test_manufter3</option>
-                    </select>
-                  </fieldset>
-                </div>
+            <div class="col-lg-12">
+              <form
+                id="search-form"
+                name="gs"
+                method="submit"
+                role="search"
+                action="#"
+              >
+                <div class="row">
+                  <div class="col-lg-4 align-self-center">
+                    <fieldset>
+                      <select
+                        name="paltform_select"
+                        class="form-select"
+                        aria-label="Area"
+                        id="platform"
+                        onchange="select_plat()"
+                      >
+                        <option value="" disabled selected hidden>
+                          --Please select Platform--
+                        </option>
+                        <option value="Platform1">Platform1</option>
+                        <option value="Platform2">Platform2</option>
+                        <option value="Platform3">Platform3</option>
+                        <option value="Platform4">SteamVR</option>
+                      </select>
+                    </fieldset>
+                  </div>
 
-                <div class="col-lg-4 align-self-center">
-                  <fieldset>
-                    <select
-                      name="gamename_select"
-                      class="form-select"
-                      aria-label="Default select example"
-                      id="gamename"
-                      onchange="select_name()"
-                    >
-                      <option value="" disabled selected hidden>
-                        --Please select GameName--
-                      </option>
-                    </select>
-                  </fieldset>
+                  <div class="col-lg-4 align-self-center">
+                    <fieldset>
+                      <select
+                        name="gamename_select"
+                        class="form-select"
+                        aria-label="Default select example"
+                        id="name"
+                        onchange="select_name()"
+                      >
+                        <option value="" disabled selected hidden>
+                          --Please select GameName--
+                        </option>
+                      </select>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <button class="main-button" onclick="query('vr_pps',1)">
+                        <i class="fa fa-search"></i> Query
+                      </button>
+                    </fieldset>
+                  </div>
                 </div>
-                <div class="col-lg-4 align-self-center">
-                  <fieldset>
-                    <button class="main-button" onclick="query('vr_pps',1)">
-                      <i class="fa fa-search"></i> Query
-                    </button>
-                  </fieldset>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -110,131 +118,358 @@ https://templatemo.com/tm-564-plot-listing
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <div class="section-heading">test</div>
+            <div class="section-heading">
+              Please select platform and gamename first!
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="naccs">
+              <div class="grid">
+                <div class="row">
+                  <div class="col-lg-12 align-self-center">
+                    <ul class="nacc">
+                      <li class="active">
+                        <div>
+                          <div class="row">
+                            <div class="col-lg-12 align-self-center">
+                              <div class="left-text">
+                                <h2>Metadata</h2>
+                                <div class="text-line" display="flex">
+                                  <div class="label">Platform:</div>
+                                  <div class="text">SteamVR</div>
+                                </div>
+                                <div class="text-line" display="flex">
+                                  <div class="label">Item Page Link:</div>
+                                  <div class="text">
+                                    <a
+                                      href="https://store.steampowered.com/app/622290/1_multi_screen_media_player_gallery_video_wall_photo_slideshow_wizard_app/?snr=1_7_7_151_150_223\nhttps://store.steampowered.com/app/622290/1_multi_screen_media_player_gallery_video_wall_photo_slideshow_wizard_app/?snr=1_7_7_151_150_200"
+                                      >Link</a
+                                    >
+                                  </div>
+                                </div>
+                                <div class="text-line" display="flex">
+                                  <div class="label">Publisher:</div>
+                                  <div class="text">avolight</div>
+                                </div>
+                                <div class="text-line" display="flex">
+                                  <div class="label">Genres:</div>
+                                  <div class="text">
+                                    early access, video production, utilities,
+                                    vr
+                                  </div>
+                                </div>
+                                <div class="text-line" display="flex">
+                                  <div class="label">Price:</div>
+                                  <div class="text">Paid</div>
+                                </div>
+                                <div class="text-line" display="flex">
+                                  <div class="label">Description:</div>
+                                  <div class="text">
+                                    Surround yourself with multiple screens of
+                                    image slideshows and video players. Try it
+                                    out to see how it runs and what’s currently
+                                    supported; if a feature you want isn't
+                                    there, I hope you check back later.
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="criteria">
+              <h2>Criteria</h2>
+              <div class="container">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="label">C1-Availability:</div>
+                  </div>
+                  <div class="col-9">
+                    <a href="https://discord.com/privacy">PP_link</a>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-3">
+                    <div class="label">C2-Completeness:</div>
+                  </div>
+                  <div class="col-9">
+                    <div class="container">
+                      <form class="form-inline">
+                        <div class="form-check mr-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="checkbox1"
+                            checked
+                          />
+                          <label class="form-check-label" for="checkbox1">
+                            Option 1
+                          </label>
+                        </div>
+                        <div class="form-check mr-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="checkbox2"
+                            disabled
+                          />
+                          <label class="form-check-label" for="checkbox2">
+                            Option 2
+                          </label>
+                        </div>
+                        <div class="form-check mr-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="checkbox3"
+                            disabled
+                          />
+                          <label class="form-check-label" for="checkbox3">
+                            Option 3
+                          </label>
+                        </div>
+                        <div class="form-check mr-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="checkbox4"
+                            disabled
+                          />
+                          <label class="form-check-label" for="checkbox4">
+                            Option 4
+                          </label>
+                        </div>
+                        <div class="form-check mr-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="checkbox5"
+                            disabled
+                          />
+                          <label class="form-check-label" for="checkbox5">
+                            Option 5
+                          </label>
+                        </div>
+                        <div class="form-check mr-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="checkbox6"
+                            disabled
+                          />
+                          <label class="form-check-label" for="checkbox6">
+                            Option 6
+                          </label>
+                        </div>
+                        <div class="form-check mr-3">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value=""
+                            id="checkbox7"
+                            disabled
+                          />
+                          <label class="form-check-label" for="checkbox7">
+                            Option 7
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="container mt-5">
+                      <h3>CUS Tuples List</h3>
+                      <table
+                        class="table"
+                        style="background: white; border-radius: 5px"
+                      >
+                        <thead>
+                          <tr>
+                            <th>Entity</th>
+                            <th>Dataobj</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Customer</td>
+                            <td>Orders</td>
+                          </tr>
+                          <tr>
+                            <td>Product</td>
+                            <td>Inventory</td>
+                          </tr>
+                          <tr>
+                            <td>Employee</td>
+                            <td>Payroll</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <div class="label">C3-Granularity:</div>
+                  </div>
+                  <div class="col-9">test2</div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <div class="label">C4-Minimization:</div>
+                  </div>
+                  <div class="col-9">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h3>Counterparts</h3>
+                          <ul class="list-group">
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >2392</span
+                              >
+                              mermaidvr video player
+                            </li>
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >1602</span
+                              >
+                              gizmovr video player
+                            </li>
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >1020</span
+                              >
+                              deovr video player
+                            </li>
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >2488</span
+                              >
+                              moon vr video player
+                            </li>
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >4380</span
+                              >
+                              viveport video
+                            </li>
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >0742</span
+                              >
+                              cinevr
+                            </li>
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >0742</span
+                              >
+                              cinevr
+                            </li>
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >3466</span
+                              >
+                              slivertv
+                            </li>
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >4336</span
+                              >
+                              virtual desktop
+                            </li>
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >3574</span
+                              >
+                              spacesys
+                            </li>
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >4203</span
+                              >
+                              tvori
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-md-12">
+                          <h3>Overboard Object</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-3">
+                    <div class="label">C5-Consistency:</div>
+                  </div>
+                  <div class="col-9">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <ul class="list-group">
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >dataobj</span
+                              >
+                              Consisytency
+                            </li>
+                            <li class="list-group-item">
+                              <span class="badge badge-primary badge-pill"
+                                >dataobject</span
+                              >
+                              Inconsistency
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
     <footer>
       <div class="container"></div>
     </footer>
 
     <!-- Scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script>
       //获取所有input盒子
       const inputs = document.querySelectorAll("select");
       for (i = 0; i < inputs.length; i++) {}
       let tbody = document.getElementsByClassName("section-heading")[0]; //获取元素
-      console.log(tbody);
       let bool = false; //控制更新阀门
       let sid = ""; //存储 key值
-      var vrpp_lis = [
-        {
-          id: 0,
-          manufter: "test_manufter0",
-          gamename: "test_name0",
-          version: "test_version0",
-          pp: "test_pp0",
-        },
-        {
-          id: 1,
-          manufter: "test_manufter1",
-          gamename: "test_name1",
-          version: "test_version1",
-          pp: "test_pp1",
-        },
-        {
-          id: 2,
-          manufter: "test_manufter2",
-          gamename: "test_name2",
-          version: "test_version2",
-          pp: "test_pp2",
-        },
-        {
-          id: 3,
-          manufter: "test_manufter3",
-          gamename: "test_name3",
-          version: "test_version3",
-          pp: "test_pp3",
-        },
-        {
-          id: 4,
-          manufter: "test_manufter4",
-          gamename: "test_name4",
-          version: "test_version4",
-          pp: "test_pp4",
-        },
-        {
-          id: 5,
-          manufter: "test_manufter5",
-          gamename: "test_name5",
-          version: "test_version5",
-          pp: "test_pp5",
-        },
-        {
-          id: 6,
-          manufter: "test_manufter6",
-          gamename: "test_name6",
-          version: "test_version6",
-          pp: "test_pp6",
-        },
-        {
-          id: 7,
-          manufter: "test_manufter7",
-          gamename: "test_name7",
-          version: "test_version7",
-          pp: "test_pp7",
-        },
-        {
-          id: 8,
-          manufter: "test_manufter8",
-          gamename: "test_name8",
-          version: "test_version8",
-          pp: "test_pp8",
-        },
-        {
-          id: 9,
-          manufter: "test_manufter9",
-          gamename: "test_name9",
-          version: "test_version9",
-          pp: "test_pp9",
-        },
-        {
-          id: 10,
-          manufter: "test_manufter10",
-          gamename: "test_name10",
-          version: "test_version10",
-          pp: "test_pp10",
-        },
-        {
-          id: 11,
-          manufter: "test_manufter11",
-          gamename: "test_name11",
-          version: "test_version11",
-          pp: "test_pp11",
-        },
-        {
-          id: 12,
-          manufter: "test_manufter12",
-          gamename: "test_name12",
-          version: "test_version12",
-          pp: "test_pp12",
-        },
-        {
-          id: 13,
-          manufter: "test_manufter13",
-          gamename: "test_name13",
-          version: "test_version13",
-          pp: "test_pp13",
-        },
-        {
-          id: 14,
-          manufter: "test_manufter14",
-          gamename: "test_name14",
-          version: "test_version14",
-          pp: "test_pp14",
-        },
-      ];
+      vrpp_lis = [];
 
       //打开数据库
       function openDB(dbname, version) {
@@ -260,11 +495,29 @@ https://templatemo.com/tm-564-plot-listing
                 autoIncrement: true,
               });
               //创建索引
-              store.createIndex("id", "id", { unique: true });
-              store.createIndex("manufter", "manufter", { unique: false });
-              store.createIndex("gamename", "gamename", { unique: false });
-              store.createIndex("version", "version", { unique: false });
-              store.createIndex("pp", "pp", { unique: false });
+              store.createIndex("_id", "_id", { unique: true });
+              store.createIndex("idx", "idx", { unique: true });
+              store.createIndex("name", "name", { unique: false });
+              store.createIndex("platform", "platform", { unique: false });
+              store.createIndex("item_page_link", "item_page_link", {
+                unique: false,
+              });
+              store.createIndex("website_link", "website_link", {
+                unique: false,
+              });
+              store.createIndex("pp_link", "pp_link", { unique: false });
+              store.createIndex("publisher", "publisher", { unique: false });
+              store.createIndex("genres", "genres", { unique: false });
+              store.createIndex("description", "description", {
+                unique: false,
+              });
+              store.createIndex("price", "price", { unique: false });
+              store.createIndex("pp_components", "pp_components", {
+                unique: false,
+              });
+              store.createIndex("k_counterparts", "k_counterparts", {
+                unique: false,
+              });
               console.log("Create Successfully");
             }
           };
@@ -293,18 +546,29 @@ https://templatemo.com/tm-564-plot-listing
         });
       }
 
-      function select_manu() {
-        var nSel = document.getElementById("manufter");
+      function delDB(dbName) {
+        const DBDeleteRequest = window.indexedDB.deleteDatabase(dbName);
+        DBDeleteRequest.onerror = (event) => {
+          console.error("Error deleting database.");
+        };
+
+        DBDeleteRequest.onsuccess = (event) => {
+          console.log("Database deleted successfully");
+
+          console.log(event.result); // should be undefined
+        };
+      }
+
+      function select_plat() {
+        var nSel = document.getElementById("platform");
         index = nSel.selectedIndex;
-        console.log(index);
         var selected_manu = nSel[index].text;
-        console.log(selected_manu);
         let request = openDB(dbName, version).then((db) => {
           let store = db.transaction(dbName, "readwrite").objectStore(dbName);
-          let index = store.index("manufter");
+          let index = store.index("platform");
           let getAllrequest = index.getAll(selected_manu);
           //游标请求成功
-          var gamename_sel = document.getElementById("gamename");
+          var gamename_sel = document.getElementById("name");
           gamename_sel.innerHTML = `<option value="" disabled selected hidden>
             --Please select GameName--
           </option>`;
@@ -313,14 +577,14 @@ https://templatemo.com/tm-564-plot-listing
             manu_res = result;
             for (i = 0; i < result.length; ++i) {
               gamename_sel.innerHTML += `
-              <option value="${result[i].gamename}">${result[i].gamename}</option>
+              <option value="${result[i].name}">${result[i].name}</option>
               `;
             }
           };
         });
       }
       function select_name() {
-        var nSel = document.getElementById("gamename");
+        var nSel = document.getElementById("name");
         index = nSel.selectedIndex;
         var selected_game = nSel[index].text;
         if (manu_res != null) {
@@ -332,17 +596,24 @@ https://templatemo.com/tm-564-plot-listing
         tbody.innerHTML = ``;
         if (result_game != null) {
           console.log("here!");
-          tbody.innerHTML += `<h2>${result_game.gamename}</h2>
-          <h6>${result_game.manufter}</h6>`;
+          tbody.innerHTML += `<h2>${result_game.name}</h2>
+          <h6>Platform: ${result_game.platform}</h6>`;
         }
       }
+      //方法三
+      $.ajax({
+        url: "pp_db_with_cus_cp.json",
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+          vrpp_lis = data;
+        },
+      });
+      //类似于方法二
+      delDB(dbName);
+      console.log(vrpp_lis);
+      console.log("@@@@@@@");
       initDB(dbName, version);
     </script>
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
-    <script src="assets/js/animation.js"></script>
-    <script src="assets/js/imagesloaded.js"></script>
-    <script src="assets/js/custom.js"></script>
   </body>
 </html>

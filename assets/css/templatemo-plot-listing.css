@@ -933,8 +933,25 @@ Popular Categories
 
 .popular-categories .naccs {
   position: relative;
-  background-color: #2b2d42;
+  background-color: #fff;
+  border: #2b2d42 solid 4px;
   border-radius: 7px;
+}
+
+.popular-categories .criteria {
+  position: relative;
+  padding: 1rem;
+  margin-top: 30px;
+  background-color: #e8ebef;
+  border-radius: 7px;
+}
+.popular-categories .criteria p {
+  color: #fff;
+}
+
+.popular-categories .criteria h2 {
+  color: #474d58;
+  margin-bottom: 20px;
 }
 
 .popular-categories .icon {
@@ -1010,21 +1027,90 @@ Popular Categories
   width: 100%;
 }
 
-.popular-categories .nacc .thumb .left-text {
+.popular-categories .nacc .left-text {
   margin-left: 30px;
+  margin-bottom: 30px;
 }
 
-.popular-categories .nacc .thumb .left-text h4 {
-  color: #fff;
+.popular-categories .nacc .left-text text-line {
+  padding: 1rem 0px;
+  margin: 1rem;
+}
+
+.criteria cline {
+  padding: 1rem 0px;
+  margin: 1rem;
+}
+
+.criteria .label {
+  color: #555c69;
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+.criteria .col-3 {
+  border-right: #7f8a9e solid 2px;
+  margin-bottom: 10px;
+}
+
+.criteria .col-9 a {
+  font-size: 18px;
+  margin-top: 1rem;
+  color: #191a20;
+}
+
+.criteria .cline .text {
+  color: #2b2;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+.popular-categories .nacc .left-text .label {
+  color: #2b2d42;
+  font-size: 20px;
+  font-weight: 500;
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.popular-categories .nacc .left-text .text {
+  color: #2b2d42;
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.popular-categories .nacc .left-text h2 {
+  color: #2b2d42;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-decoration-line: underline;
+}
+
+.popular-categories .nacc .left-text h4 {
+  color: #2b2d42;
   font-size: 20px;
   font-weight: 700;
   line-height: 35px;
   margin-bottom: 30px;
 }
 
-.popular-categories .nacc .thumb .left-text p {
-  color: #fff;
-  margin-bottom: 30px;
+.popular-categories .nacc .left-text p {
+  color: #2b2d42;
+  margin-left: 0.7rem;
+  font-size: 16px;
+}
+.popular-categories .nacc .left-text h5 {
+  color: #2b2d42;
+  font-size: 20px;
+  margin-top: 0.1rem;
 }
 
 .popular-categories .nacc .thumb .right-image {
