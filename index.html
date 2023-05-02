@@ -535,6 +535,7 @@ https://templatemo.com/tm-564-plot-listing
           let request = db.transaction(dbName, "readwrite").objectStore(dbName);
           for (i = 0; i < vrpp_lis.length; ++i) {
             result = request.add(vrpp_lis[i]);
+            console.log(vrpp_lis[i]);
             result.onsuccess = function (e) {
               console.log("Add Successfully!");
             };
