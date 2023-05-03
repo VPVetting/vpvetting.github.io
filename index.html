@@ -394,7 +394,7 @@ https://templatemo.com/tm-564-plot-listing
                                   </div>
                                   <div class="text-line" display="flex">
                                     <div class="label">Genres:</div>
-                                    <div class="text">
+                                    <div class="text" style="margin-left:2rem;margin-right:2rem;">
                                       ${result_game.genres}
                                     </div>
                                   </div>
@@ -449,6 +449,7 @@ https://templatemo.com/tm-564-plot-listing
                           value=""
                           id="checkbox1"
                           disabled
+                  
                           ${result_game.Specific_Audiences}
                         />
                         <label class="form-check-label" for="checkbox1">
@@ -539,7 +540,7 @@ https://templatemo.com/tm-564-plot-listing
                     <h5>CUS Tuples List</h5>
                     <table
                       class="table"
-                      style="background: white; border-radius: 5px"
+                      style="background: white; border-radius: 5px; text-align:center"
                     >
                       <thead>
                         <tr>
@@ -547,7 +548,7 @@ https://templatemo.com/tm-564-plot-listing
                           <th>Dataobj</th>
                         </tr>
                       </thead>
-                      <tbody>
+                      <tbody >
 
                       </tbody>
                     </table>
@@ -563,7 +564,7 @@ https://templatemo.com/tm-564-plot-listing
                 </div>
                 <div class="col-9">
                   <div class="rank" style="margin-left:2rem;">
-                    <div class="row" style="background-color:white;border-bottom:black 1px solid">
+                    <div class="row" style="background-color:white;border-bottom:black 1px solid;border-top-right-radius:5px;border-top-left-radius:5px;">
                       <div class="col-md-3">gap_l</div>
                       <div class="col-md-3">gap_u</div>
                       <div class="col-md-3">gap_lu</div>
@@ -636,12 +637,13 @@ https://templatemo.com/tm-564-plot-listing
                   <div class="label">C5-Consistency:</div>
                 </div>
                 <div class="col-9">
-                  <h5>Consistency</h5>
-                  <div class="row" name="consis-row">
-
-                  </div>
-                  <h5>Inconsistency</h5>
-                  <div class="row" name="inconsis-row"></div>
+                  <div class="container" style="margin-left:0rem">
+                    <h5 >Consistency</h5>
+                    <div class="row" name="consis-row">
+                    </div>
+                    <h5 style="margin-top:2rem;">Inconsistency</h5>
+                    <div class="row" name="inconsis-row"></div></div>
+                  
                 </div>
               </div>
             </div>
@@ -735,27 +737,27 @@ https://templatemo.com/tm-564-plot-listing
           `;
         }
         var c3_cont = document.getElementsByClassName("rank")[0];
-        c3_cont.innerHTML = `<div class="row" style="background-color:white;border-bottom:black 1px solid">
-          <div class="col-md-3">gap_l</div>
-          <div class="col-md-3">gap_u</div>
-          <div class="col-md-3">gap_lu</div>
-          <div class="col-md-3">bar_g</div>
+        c3_cont.innerHTML = `<div class="row" style="background-color:white;border-bottom:black 2px solid;margin-right:2rem;padding:0.5rem;border-top-right-radius:5px;border-top-left-radius:5px;">
+          <div class="col-md-3" style="text-align:center;font-weight:600;font-size:18px;" >gap_l</div>
+          <div class="col-md-3" style="text-align:center;font-weight:600;font-size:18px;">gap_u</div>
+          <div class="col-md-3" style="text-align:center;font-weight:600;font-size:18px;">gap_lu</div>
+          <div class="col-md-3" style="text-align:center;font-weight:600;font-size:18px;">bar_g</div>
         </div>`;
         console.log(typeof result_game.C3["gap_l"][0]);
         for (i = 0; i < 2; i++) {
           console.log(typeof result_game.C3["gap_l"][i]);
           c3_cont.innerHTML += `
-          <div class="row" style="background-color:white;border-bottom:black 1px solid">
-            <div class="col-md-3">${
+          <div class="row" style="background-color:white;border-bottom:#cccccc 1px solid;margin-right:2rem;padding:0.3rem;">
+            <div class="col-md-3" style="text-align:center">${
               Math.round(result_game.C3["gap_l"][i] * 100) / 100
             }</div>
-            <div class="col-md-3">${
+            <div class="col-md-3" style="text-align:center">${
               Math.round(result_game.C3["gap_u"][i] * 100) / 100
             }</div>
-            <div class="col-md-3">${
+            <div class="col-md-3" style="text-align:center">${
               Math.round(result_game.C3["gap_lu"][i] * 100) / 100
             }</div>
-            <div class="col-md-3">${
+            <div class="col-md-3" style="text-align:center">${
               Math.round(result_game.C3["bar_g"][i] * 100) / 100
             }</div>
           </div>`;
@@ -786,7 +788,7 @@ https://templatemo.com/tm-564-plot-listing
         }
         for (i = 0; i < result_game.C4["Overbroad"].length; ++i) {
           c4_overbroadcont.innerHTML += `
-          <div class="col-3">${result_game.C4["Overbroad"][i]}</div>`;
+          <div class="col-md-3" style="border:none;"><div class="list-box"  style="background-color:#d14662;margin-bottom=0.5rem">${result_game.C4["Overbroad"][i]}</div></div>`;
         }
         c5_consis_cont = document.getElementsByName("consis-row")[0];
         c5_inconsis_cont = document.getElementsByName("inconsis-row")[0];
@@ -794,10 +796,10 @@ https://templatemo.com/tm-564-plot-listing
         c5_inconsis_cont.innerHTML = ``;
         for (i = 0; i < result_game.C5["Consistency"].length; ++i) {
           c5_consis_cont.innerHTML += `
-          <div class="col-3">${result_game.C5["Consistency"][i]}</div>`;
+          <div class="col-md-3" style="border:none;margin-bottom=0.5rem"><div class="list-box" style="background-color:#27ae90;margin-bottom=0.5rem">${result_game.C5["Consistency"][i]}</div></div>`;
         }
         for (i = 0; i < result_game.C5["In-consistency"].length; ++i) {
-          c5_inconsis_cont.innerHTML += `<div class="col-3">${result_game.C5["In-consistency"][i]}</div>
+          c5_inconsis_cont.innerHTML += `<div class="col-md-3" style="border:none;margin-bottom=0.5rem"><div class="list-box" style="background-color:#d14662;margin-bottom=1.5rem">${result_game.C5["In-consistency"][i]}<div></div>
           `;
         }
       }

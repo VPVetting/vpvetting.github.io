@@ -1049,6 +1049,15 @@ Popular Categories
   margin: 1rem;
 }
 
+.list-box {
+  color: #ffffff;
+  margin: 0.05rem;
+  padding: 0.2rem 0.2rem;
+  border-radius: 5px;
+  text-align: center;
+  border: #fff solid 2px;
+}
+
 .criteria-box .label {
   color: #555c69;
   font-size: 20px;
@@ -1395,12 +1404,12 @@ contact
   border-bottom-left-radius: 7px;
 }
 
-form#contact {
+div#contact {
   position: relative;
   margin: 0px 60px 0px 45px;
 }
 
-form#contact input {
+div#contact input {
   width: 100%;
   height: 46px;
   border-radius: 7px;
@@ -1414,12 +1423,12 @@ form#contact input {
   margin-bottom: 30px;
 }
 
-form#contact ul li {
+div#contact ul li {
   display: inline-block;
   margin-right: 30px;
 }
 
-form#contact ul li:last-child {
+div#contact ul li:last-child {
   margin-right: 0px;
 }
 
@@ -2091,7 +2100,7 @@ responsive
   .category-post .top-content .top-icon h4 {
     left: 86px;
   }
-  form#search-form {
+  div#search-form {
     padding: 30px;
   }
   .popular-categories .naccs .menu .thumb,
@@ -2128,13 +2137,13 @@ responsive
 }
 
 @media (max-width: 992px) {
-  form#search-form select,
-  form#search-form input {
+  div#search-select,
+  div#search-form input {
     border: 1px solid #8d99af;
     border-radius: 7px;
     margin-bottom: 15px;
   }
-  form#search-form button {
+  div#search-form button {
     border-radius: 7px;
   }
   .listing-page .naccs .menu {
