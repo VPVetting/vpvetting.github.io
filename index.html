@@ -57,7 +57,7 @@ https://templatemo.com/tm-564-plot-listing
           </div>
           <div class="col-lg-12 align-self-center">
             <div class="col-lg-12">
-              <form
+              <div
                 id="search-form"
                 name="gs"
                 method="submit"
@@ -72,21 +72,25 @@ https://templatemo.com/tm-564-plot-listing
                         class="form-select"
                         aria-label="Area"
                         id="platform"
-                        onchange="select_plat()"
+                        onchange="select_plat('')"
                       >
                         <option value="" disabled selected hidden>
                           --Please select Platform--
                         </option>
-                        <option value="Viveport">Viveport</option>
-                        <option value="Microsoft">Microsoft</option>
-                        <option value="Quest">Quest</option>
-                        <option value="SteamVR">SteamVR</option>
-                        <option value="Go">Go</option>
-                        <option value="Gear">Gear</option>
-                        <option value="App_Lab">App Lab</option>
-                        <option value="Rift">Rift</option>
-                        <option value="Sidequest">Sidequest</option>
-                        <option value="PSVR">PSVR</option>
+                        <option value="Viveport" id="Viveport">Viveport</option>
+                        <option value="Microsoft" id="Microsoft">
+                          Microsoft
+                        </option>
+                        <option value="Quest" id="Quest">Quest</option>
+                        <option value="SteamVR" id="SteamVR">SteamVR</option>
+                        <option value="Go" id="Go">Go</option>
+                        <option value="Gear" id="Gear">Gear</option>
+                        <option value="App_Lab" id="App_Lab">App Lab</option>
+                        <option value="Rift" id="Rift">Rift</option>
+                        <option value="Sidequest" id="Sidequest">
+                          Sidequest
+                        </option>
+                        <option value="PSVR" id="PSVR">PSVR</option>
                       </select>
                     </fieldset>
                   </div>
@@ -114,7 +118,7 @@ https://templatemo.com/tm-564-plot-listing
                     </fieldset>
                   </div>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -152,10 +156,21 @@ https://templatemo.com/tm-564-plot-listing
     <script src="https://cdn.bootcdn.net/ajax/libs/popper.js/2.9.3/umd/popper.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
     <script>
+      function testAsync() {
+        return new Promise((resolve, reject) => {
+          //here our function should be implemented
+          setTimeout(() => {
+            console.log("Hello from inside the testAsync function");
+            resolve();
+          }, 5000);
+        });
+      }
       //获取所有input盒子
       const inputs = document.querySelectorAll("select");
       for (i = 0; i < inputs.length; i++) {}
       let tbody = document.getElementsByClassName("section-heading")[0]; //获取元素
+      console.log("tbody");
+      console.log(tbody);
       let ret_cont = document.getElementsByName("result")[0];
       let bool = false; //控制更新阀门
       let sid = ""; //存储 key值
@@ -291,7 +306,7 @@ https://templatemo.com/tm-564-plot-listing
         };
       }
 
-      function select_plat() {
+      function select_plat(selected_name) {
         var nSel = document.getElementById("platform");
         index = nSel.selectedIndex;
         var selected_manu = nSel[index].value;
@@ -310,15 +325,24 @@ https://templatemo.com/tm-564-plot-listing
             result = getAllrequest.result;
             console.log(result);
             manu_res = result;
+            console.log("Miao Miao Miao");
             for (i = 0; i < result.length; ++i) {
-              gamename_sel.innerHTML += `
-              <option value="${result[i].name}">${result[i].name}</option>
+              if (selected_name != "" && result[i].name == selected_name) {
+                gamename_sel.innerHTML += `
+              <option value="${result[i].name}" id=${result[i].name} selected>${result[i].name}</option>
               `;
+              } else {
+                gamename_sel.innerHTML += `
+                <option value="${result[i].name}" id=${result[i].name}>${result[i].name}</option>
+                `;
+              }
             }
           };
         });
       }
       function select_name() {
+        console.log("here in select_name");
+        console.log(manu_res);
         var nSel = document.getElementById("name");
         index = nSel.selectedIndex;
         var selected_game = nSel[index].text;
@@ -328,6 +352,8 @@ https://templatemo.com/tm-564-plot-listing
       }
       // 查询vr_pp
       function query(dbName, version) {
+        console.log("tbody in query:");
+        console.log(tbody);
         tbody.innerHTML = ``;
         ret_cont.innerHTML = ``;
         if (result_game != null) {
@@ -696,6 +722,7 @@ https://templatemo.com/tm-564-plot-listing
           }
         }
         var cus_cont = document.getElementsByTagName("tbody")[0];
+        console.log(typeof cus_cont);
         cus_cont.innerHTML = ``;
         for (i = 0; i < result_game.CUS.length; i++) {
           console.log("hERE" + i);
@@ -807,6 +834,7 @@ https://templatemo.com/tm-564-plot-listing
       console.log(vrpp_lis[0][0]);
 
       //类似于方法二
+
       delDB(dbName);
       initDB(dbName, version);
     </script>

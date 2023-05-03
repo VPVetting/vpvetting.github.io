@@ -857,7 +857,7 @@ Banner Style
   max-width: 27px;
 }
 
-form#search-form {
+div#search-form {
   background-color: #fff;
   padding: 0px 0px 0px 30px;
   width: 100%;
@@ -866,8 +866,8 @@ form#search-form {
   text-align: center;
 }
 
-form#search-form select,
-form#search-form input {
+div#search-form select,
+div#search-form input {
   width: 100%;
   height: 36px;
   background-color: transparent;
@@ -881,18 +881,18 @@ form#search-form input {
   box-shadow: none;
 }
 
-form#search-form input.searchText {
+div#search-form input.searchText {
   border-left: 1px solid #8d99af;
   border-right: 1px solid #8d99af;
   padding: 0px 30px;
 }
 
-form#search-form input::placeholder {
+div#search-form input::placeholder {
   color: #2a2a2a;
   font-size: 15px;
 }
 
-form#search-form button {
+div#search-form button {
   width: 100%;
   height: 100%;
   background-color: #8d99af;
@@ -904,7 +904,7 @@ form#search-form button {
   border-bottom-right-radius: 7px;
 }
 
-form#search-form button i {
+div#search-form button i {
   width: 40px;
   height: 40px;
   background-color: #fff;
