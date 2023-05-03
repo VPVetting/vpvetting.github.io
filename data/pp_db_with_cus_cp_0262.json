@@ -1,0 +1,98 @@
+[
+  {
+    "_id": {
+      "$oid": "6444a06fd36fbaa6112dbb3e"
+    },
+    "idx": "0262",
+    "name": "arkio",
+    "platform": "Quest, SteamVR, Rift, Sidequest",
+    "Viveport": 0,
+    "Microsoft": 0,
+    "Quest": 1,
+    "SteamVR": 1,
+    "Go": 0,
+    "Gear": 0,
+    "App_Lab": 0,
+    "Rift": 1,
+    "Sidequest": 1,
+    "PSVR": 0,
+    "item_page_link": "https://store.steampowered.com/app/1053760/Arkio/?snr=1_7_7_151_150_136\nhttps://sidequestvr.com/app/2291/arkio\nhttps://www.oculus.com/experiences/rift/1823664821020140\nhttps://www.oculus.com/experiences/quest/2280319701979278?ranking_trace=111482547440046_2280319701979278_SKYLINEWEB_3955297897903802%3D%3D2WLh8wEcKWCs6kTjo\nhttps://store.steampowered.com/app/1053760/Arkio/?snr=1_7_7_151_150_137",
+    "website_link": "https://arkio.is/\nhttps://www.arkio.is/",
+    "pp_link": "https://www.arkio.is/privacy",
+    "publisher": "arkio, arkio ehf",
+    "genres": "educational, collaboration, modeling, vr, urban, productivity, creation, creativity design, artcreativity, utilities, building, design illustration, animation modeling, utility, handtracking, architecture, tracking, early access, hand, multiplayer, design, game design",
+    "description": "Collaboratively sketch urban plans, buildings and interiors like never before using VR, PCs, phones and tablets. Start fresh or import a 3D model, sketch on top of it then export your design to other 3D design tools, including to Revit as native Revit geometry.\nArkio is a collaborative design tool that enables you to sketch buildings, interiors or urban plans with others using VR, desktops, tablets and phones. \n\nDesign by yourself or work with up to 24 people to make better design decisions faster. Create buildings, virtual cityscapes, Unity scenes with triggers and colliders, remodel your kitchen or review existing 3D models.\n\nWork in VR or use Arkio’s passthrough support on Quest to blend real and virtual worlds like never before. Create walls, place virtual furniture or create portal windows from the real world into the VR world beyond.\n\nArkio features a unique volumetric modeling kernel built for VR and mobile devices, making the modeling experience feel closer to physical model-making than traditional 3D apps.\n\nIn Arkio you can either start fresh or import reference images, 3D models and scenes from Unity, Revit, Rhino, SketchUp, LiDAR apps and more. Easily create new design options in Arkio then export your work back.\nDescription\nARKIO IS NOW LIVE ON THE QUEST STORE!  ->  https://www.oculus.com/experiences/quest/2280319701979278\nThe old App Lab version will not continue to receive updates. Search for Arkio on the store and install the new version instead to get access to all the latest features like Meta Avatar support, passthrough modeling, Unity integration and more. You can transfer your old Arkio scenes to the new store version using the App Lab file transfer feature, available on startup in the old version (Arkio - beta)\nArkio is a collaborative design tool that enables you to sketch buildings, interiors or urban plans with others using VR, desktops, tablets and phones. \nDesign by yourself or work with up to 24 people to make better design decisions faster. Create buildings, virtual cityscapes, Unity scenes with triggers and colliders, remodel your kitchen or review existing 3D models.\nWork in VR or use Arkio’s passthrough support to blend the real and virtual world like never before. Create walls, place virtual furniture or create portal windows from the real world into the VR world beyond.\nArkio features a unique volumetric modeling kernel built for VR and mobile devices, making the modeling experience feel closer to physical model-making than traditional 3D apps.\nIn Arkio you can either start fresh or import reference images, 3D models and scenes from Unity, Revit, Rhino, SketchUp, LiDAR apps and more. Easily create new design options in Arkio then export your work back.\nArkio is a collaborative design tool that enables you to sketch buildings, interiors or urban plans with others using VR, desktops, tablets and phones. \n\nDesign by yourself or work with up to 24 people to make better design decisions faster. Create buildings, virtual cityscapes, Unity scenes with triggers and colliders, remodel your kitchen or review existing 3D models.\n\nWork in VR or use Arkio’s passthrough support to blend the real and virtual world like never before. Create walls, place virtual furniture or create portal windows from the real world into the VR world beyond.\n\nArkio features a unique volumetric modeling kernel built for VR and mobile devices, making the modeling experience feel closer to physical model-making than traditional 3D apps.\n\nIn Arkio you can either start fresh or import reference images, 3D models and scenes from Unity, Revit, Rhino, SketchUp, LiDAR apps and more. Easily create new design options in Arkio then export your work back.",
+    "price": "Free",
+    "pp_components": "1st Collection, 3rd Sharing, User Choice, Data Security, Specific Audiences, User Access, Policy Change, Data Retention, Other",
+    "k_counterparts": [
+      [1, "1679", "gravity sketch vr", 0.32673394680023193],
+      [2, "2592", "neos vr", 0.32529503107070923],
+      [3, "3693", "strata instudio vr", 0.30074232816696167],
+      [4, "4508", "vrcat", 0.2863885462284088],
+      [5, "4405", "voxvr", 0.26789194345474243],
+      [6, "4203", "tvori", 0.2510070204734802],
+      [7, "4303", "verto studio vr", 0.24721884727478027],
+      [8, "3677", "stereopaint", 0.22612014412879944],
+      [9, "1600", "giphy world vr", 0.22090619802474976],
+      [10, "3354", "shapelab", 0.2076014280319214]
+    ],
+    "cus": "type, information, pii, usage info, information, geo location, age, pii, usage info, information",
+    "C1": "https://www.arkio.is/privacy",
+
+    "Specific_Audiences": "checked",
+    "Policy_Change": "checked",
+    "Data_Retention": "checked",
+    "User_ChoiceControl": "checked",
+    "Data_Security": "checked",
+    "Data_Collection": "checked",
+    "User_AccessEditDeletion": "checked",
+
+    "CUS": [
+      ["we", "collect", "type"],
+      ["we", "collect", "information"],
+      ["we", "collect", "pii"],
+      ["we", "collect", "usage info"],
+      ["third party", "collect", "information"],
+      ["we", "collect", "geo location"],
+      ["we", "collect", "age"],
+      ["third party", "collect", "pii"],
+      ["third party", "collect", "usage info"]
+    ],
+    "C3": {
+      "gap_l": [2, 0.23766654663305725],
+      "gap_u": [101, 0.6258552394670508],
+      "gap_lu": [103, 0.583363341735686],
+      "bar_g": [2.216760513290962, 0.8077061577241628]
+    },
+    "C4": {
+      "CP": [
+        [1, "1679", "gravity sketch vr", 0.32673394680023193],
+        [2, "2592", "neos vr", 0.32529503107070923],
+        [3, "3693", "strata instudio vr", 0.30074232816696167],
+        [4, "4508", "vrcat", 0.2863885462284088],
+        [5, "4405", "voxvr", 0.26789194345474243],
+        [6, "4203", "tvori", 0.2510070204734802],
+        [7, "4303", "verto studio vr", 0.24721884727478027],
+        [8, "3677", "stereopaint", 0.22612014412879944],
+        [9, "1600", "giphy world vr", 0.22090619802474976],
+        [10, "3354", "shapelab", 0.2076014280319214]
+      ],
+      "Overbroad": ["age", "type", "geo location"]
+    },
+    "C5": {
+      "Consistency": ["geo location"],
+      "In-consistency": [
+        "vr play area",
+        "audio",
+        "eye tracking",
+        "pupil distance",
+        "network",
+        "camera",
+        "device info",
+        "infrared",
+        "face",
+        "hand tracking"
+      ]
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "_id": {
+      "$oid": "63fc753a119b211b673d3ca0"
+    },
+    "name": "100ft robot golf",
+    "platform": "PSVR",
+    "Viveport": 0,
+    "Microsoft": 0,
+    "Quest": 0,
+    "SteamVR": 0,
+    "Go": 0,
+    "Gear": 0,
+    "App_Lab": 0,
+    "Rift": 0,
+    "Sidequest": 0,
+    "PSVR": 1,
+    "item_page_link": "https://store.playstation.com/en-us/product/UP0476-CUSA04678_00-100FTKAIJUBUNDLE",
+    "website_link": null,
+    "pp_link": "",
+    "publisher": "no goblin llc",
+    "genres": "sport",
+    "description": "BONUS! Buy this bundle and get access to Kaiju Driving Range, the PlayStation VR exclusive add-on content that lets a robot golfing player on your TV compete against a PlayStation VR controlled Kaiju! \n\n---\n\n100ft Robot Golf is a real time golf game where you get to control impossibly large robots on their quest for par. Never get your ball stuck behind a pesky tree or skyscraper ever again! Just swing your golf club to smash even the tallest buildings out of the way - or into the way of your robot golfing buddies.\n\nUp to four players can hit the greens, cities, mountains and orbiting moons that comprise the Robot Golf Tour Circuit. Either split-screen or online, budding robot golf pilots can play frantic real-time golf, classic turn based action, or even custom rulesets crafted for your own custom Robot Golf round!\n\n  Software subject to license (us.playstation.com/softwarelicense). Online features require an account and are subject to terms of service and applicable privacy policy (playstationnetwork.com/terms-of-service & playstationnetwork.com/privacy-policy). One-time license fee for play on account’s designated primary PS4™ system and other PS4™ systems when signed in with that account.\n\nFor Kaiju Driving Range: Unreal® is a trademark or registered trademark of Epic Games, Inc. in the United States of America and elsewhere. Unreal® Engine, Copyright 1998 – 2017, Epic Games, Inc.\nAll rights reserved.",
+    "price": "Paid"
+  }
+]

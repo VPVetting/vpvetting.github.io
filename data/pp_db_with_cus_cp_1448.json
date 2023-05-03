@@ -1,0 +1,115 @@
+[
+  {
+    "_id": {
+      "$oid": "6444a070d36fbaa6112dbfe0"
+    },
+    "idx": "1448",
+    "name": "fitxr boxing hiit and dance workouts",
+    "platform": "Quest",
+    "Viveport": 0,
+    "Microsoft": 0,
+    "Quest": 1,
+    "SteamVR": 0,
+    "Go": 0,
+    "Gear": 0,
+    "App_Lab": 0,
+    "Rift": 0,
+    "Sidequest": 0,
+    "PSVR": 0,
+    "item_page_link": "https://www.oculus.com/experiences/quest/2327205800645550?ranking_trace=111482547440046_2327205800645550_SKYLINEWEB_3955297897903802%3D%3DF8ucB03MoyEhA2HH9",
+    "website_link": "http://www.fitxr.com/",
+    "pp_link": "https://fitxr.com/privacy",
+    "publisher": "fitxr",
+    "genres": "health fitness",
+    "description": "FitXR is on a mission to make working out accessible and fun for all. Whatever your skill level, we’ve got hundreds of professionally choreographed workouts ready to get you sweating.\n\nJoin our community and enjoy 7 brand new workouts every week, set to music from some of the world’s top artists. With 3 unique studios, we offer Boxing, HIIT, and Dance classes hosted by our cast of world-class professional trainers - all set in breathtaking environments.\n\n🆕 7 NEW CLASSES EVERY WEEK\nEnjoy an ever-expanding library of industry-leading workouts across our 3 unique studios.\n\n🔥 WARM UP AND COOL DOWN ❄️\nYour complete workout routine in one app. Warm Up, Work Out, and Cool Down all from FitXR.\n\n🤝 WORK OUT WITH FRIENDS\nWorkout in real-time with up to 6 friends in multiplayer and encourage each other over voice.\n\n💃 TRY OUR WHOLE LIBRARY COMPLETELY FREE\nGet a week of unlimited access, with no payment needed upfront. If it’s not for you? Cancel any time through your Oculus account.",
+    "price": "Free",
+    "pp_components": "1st Collection, 3rd Sharing, User Choice, Data Security, Specific Audiences, User Access, Policy Change, Data Retention, Other",
+    "k_counterparts": [
+      [1, "2197", "les mills bodycombat", 0.32711708545684814],
+      [2, "1828", "holofit by holodia", 0.3116317093372345],
+      [3, "1815", "hoame", 0.14619341492652893],
+      [4, "1700", "guided tai chi", 0.1187821477651596],
+      [5, "3098", "reakt performance trainer", 0.07979927211999893],
+      [6, "1212", "echart healthcare", 0.036922749131917953],
+      [7, "2528", "multi sensory room vr", 0.01835557632148266]
+    ],
+    "cus": "pii, weight, workout, pii, usage info, account, geo location, sexuality, device info, browser type, weight, information, billing, information, calorie, health, model, contact, calorie, information, information, email addr, account, pii, language, gameplay, workout, age, billing, interest, system ver, interest, usage time",
+    "C1": "https://fitxr.com/privacy",
+
+    "Specific_Audiences": "checked",
+    "Policy_Change": "checked",
+    "Data_Retention": "checked",
+    "User_ChoiceControl": "checked",
+    "Data_Security": "checked",
+    "Data_Collection": "checked",
+    "User_AccessEditDeletion": "checked",
+
+    "CUS": [
+      ["we", "collect", "weight"],
+      ["we", "collect", "pii"],
+      ["we", "collect", "usage info"],
+      ["we", "collect", "account"],
+      ["we", "collect", "geo location"],
+      ["we", "collect", "sexuality"],
+      ["we", "collect", "device info"],
+      ["we", "collect", "browser type"],
+      ["third party", "collect", "weight"],
+      ["law enforcement", "collect", "information"],
+      ["third party", "collect", "billing"],
+      ["we", "collect", "calorie"],
+      ["we", "collect", "model"],
+      ["we", "collect", "contact"],
+      ["we", "collect", "information"],
+      ["third party", "collect", "information"],
+      ["we", "collect", "email addr"],
+      ["third party", "collect", "account"],
+      ["third party", "collect", "pii"],
+      ["we", "collect", "language"],
+      ["we", "collect", "gameplay"],
+      ["we", "collect", "workout"],
+      ["we", "collect", "age"],
+      ["we", "collect", "billing"],
+      ["we", "collect", "interest"],
+      ["we", "collect", "system ver"],
+      ["third party", "collect", "interest"],
+      ["we", "collect", "usage time"]
+    ],
+    "C3": {
+      "gap_l": [7, 0.9063737846597048],
+      "gap_u": [86, 0.1314368023046453],
+      "gap_lu": [93, 0.14656103709038532],
+      "bar_g": [1.6765551054335766, 0.22758372344256392]
+    },
+    "C4": {
+      "CP": [
+        [1, "2197", "les mills bodycombat", 0.32711708545684814],
+        [2, "1828", "holofit by holodia", 0.3116317093372345],
+        [3, "1815", "hoame", 0.14619341492652893],
+        [4, "1700", "guided tai chi", 0.1187821477651596],
+        [5, "3098", "reakt performance trainer", 0.07979927211999893],
+        [6, "1212", "echart healthcare", 0.036922749131917953],
+        [7, "2528", "multi sensory room vr", 0.01835557632148266]
+      ],
+      "Overbroad": [
+        "sexuality",
+        "usage time",
+        "browser type",
+        "gameplay",
+        "workout",
+        "system ver",
+        "calorie",
+        "model",
+        "language",
+        "age",
+        "email addr",
+        "interest",
+        "geo location",
+        "weight"
+      ]
+    },
+    "C5": {
+      "Consistency": ["information", "device info", "geo location"],
+      "In-consistency": ["audio", "network", "camera", "hand tracking"]
+    }
+  }
+]

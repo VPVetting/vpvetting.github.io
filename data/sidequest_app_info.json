@@ -1,0 +1,26 @@
+[
+  {
+    "_id": {
+      "$oid": "63fc753c119b211b673d456b"
+    },
+    "name": "arcaxer prerelease",
+    "platform": "Sidequest",
+    "Viveport": 0,
+    "Microsoft": 0,
+    "Quest": 0,
+    "SteamVR": 0,
+    "Go": 0,
+    "Gear": 0,
+    "App_Lab": 0,
+    "Rift": 0,
+    "Sidequest": 1,
+    "PSVR": 0,
+    "item_page_link": "https://sidequestvr.com/app/1217/arcaxer-pre-release",
+    "website_link": "http://arcaxer.com/",
+    "pp_link": null,
+    "publisher": null,
+    "genres": "combat, adventure, ar, turn based, third person, first person, action, mixed reality, rpg, passthrough",
+    "description": "Description\nA Turn Based Action RPG!\nTry the demo first! https://sidequestvr.com/app/549/arcaxer-demo\nImportant! This is the Pre-Release version of Arcaxer. This version features more content than the demo version but is still in development and is not a finished game.\nArcaxer is a turn based RPG with first person action oriented combat, and a 3rd person god-view overworld. \nIn the overworld you will explore procedural dungeons to find equips and new abilities for your character. You can also explore the hub world to interact with NPC's and buy new items with the credits that you earn in the dungeon.  \nEven though combat is turn based you must dodge enemy attacks with your body, and aim and time your own attacks with gestures. Can you make it to the top of \"The Stack\"?  \nPlayer Classes\nChoose fighter, thief, or mage to drastically change which abilities you learn as you explore the dungeons.  \nFighter: A class with a focus on physical attacks \nMage: A class with a focus on Hax, the game's special abilities.\nThief: A class that requires skill and precision to use properly  \nProcedurally Generated Dungeons\nThe Stack is a huge procedurally generated dungeon filled with random enemies and loot. The dungeon changes as you get higher including more dangerous traps and enemies.\nThis is an early demo of a game in development and may have bugs, balance, and performance issues.  \nJoin the discord to get early builds and more! https://discord.gg/BCqy2m3\nLatest Major Update: 1.38.0\nKey Changes: \n\nAdded experimental \"PAssthrough Mixed Reality\" mode.\n\nIf you enjoy the game please leave feedback at :\nhttp://www.reddit.com/r/Arcaxer\nAlso if you want to support development consider donating for preview builds with more content! \nhttps://www.patreon.com/Arcaxer",
+    "price": "Paid"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "_id": {
+      "$oid": "6444a070d36fbaa6112dc744"
+    },
+    "idx": "3340",
+    "name": "sentio vr",
+    "platform": "Go, Gear, App Lab",
+    "Viveport": 0,
+    "Microsoft": 0,
+    "Quest": 0,
+    "SteamVR": 0,
+    "Go": 1,
+    "Gear": 1,
+    "App_Lab": 1,
+    "Rift": 0,
+    "Sidequest": 0,
+    "PSVR": 0,
+    "item_page_link": "https://www.oculus.com/experiences/gear-vr/1355030521256699?ranking_trace=111482547440046_1355030521256699_SKYLINEWEB_174868819587665%3D%3DEQAnaFmmGcvrAlxtd\nhttps://sidequestvr.com/app/3455/sentio-vr\nhttps://www.oculus.com/experiences/go/1355030521256699",
+    "website_link": "http://sentiovr.com/\nhttps://sentiovr.com/",
+    "pp_link": "https://www.sentiovr.com/privacy-policy",
+    "publisher": "solutionario",
+    "genres": "educational, exploration, productivity",
+    "description": "SENTIO VR is the easiest way for presentation of architectural & interior design spaces in Virtual Reality. With SentioVR, users can create an account & share Virtual Reality experiences of designs using all types of architectural render formats (spherical, stereo spherical, cubemap, stereo cubemap). By uploading content on our web platform- produced from professional 3D software ( Sketchup, 3DS Max, Revit ) or professional 360 cameras, users can create & customise tours - which are transformed into shareable experiences ready to view on PC/Mobile & VR devices in a few clicks.\n\nNeed some inspiration ? Download the app & explore a unique gallery of 360 experiences of architectural sites curated by ArchDaily - the world’s most visited architecture website.\nDescription\nSENTIO VR is the preferred 3D visualization platform for professionals working in the Architecture, Engineering & Construction Industry in 100+ countries. How does a project that has not yet been built look like? Instead of reviewing 2D floorplans, renders & video walkthroughs - SENTIO VR customers put on an Oculus Quest headset for real-time feedback with clients, improved designs & win new projects.\nHere are the key features that make SENTIO VR stand out:\n\nPlugins for SketchUp & Autodesk Revit\n\n\nNo downloads or upload of files needed. Works with your existing design tools\n\n\nNo additional downloads\n\n\nNo additional PC software is required to manage the model upload process.\n\n\nIntuitive VR meetings\n\n\nMulti-user collaboration meetings have never been easier using access codes & passwords\n\nHave questions? Reach out to us at hello@sentiovr.com",
+    "price": "Free",
+    "pp_components": "1st Collection, 3rd Sharing, Data Security, User Access, Policy Change, Data Retention, Other",
+    "k_counterparts": [
+      [1, "2694", "okyeonjeongsa vr", 0.3857271373271942],
+      [2, "4383", "vlaminck vr", 0.3090575635433197],
+      [3, "1972", "inlight spark", 0.23821762204170227],
+      [4, "1839", "home tech vr", 0.15224063396453857],
+      [5, "0717", "chemistry vr", 0.14191418886184692],
+      [6, "2551", "mysteries of china the forbidden city", 0.02019892819225788]
+    ],
+    "cus": "usage info, type, information, pii, usage info, account, non-pii, user id, billing, contact, pii",
+    "C1": "https://www.sentiovr.com/privacy-policy",
+    "Specific_Audiences": "",
+    "Policy_Change": "checked",
+    "Data_Retention": "checked",
+    "User_ChoiceControl": "",
+    "Data_Security": "checked",
+    "Data_Collection": "checked",
+    "User_AccessEditDeletion": "checked",
+
+    "CUS": [
+      ["we", "collect", "type"],
+      ["we", "collect", "information"],
+      ["we", "collect", "pii"],
+      ["we", "collect", "usage info"],
+      ["we", "collect", "account"],
+      ["we", "collect", "non-pii"],
+      ["we", "collect", "user id"],
+      ["we", "collect", "billing"],
+      ["we", "collect", "contact"]
+    ],
+    "C3": {
+      "gap_l": [3, 0.43968311127115595],
+      "gap_u": [98, 0.4706517824990997],
+      "gap_lu": [101, 0.4386028087864602],
+      "bar_g": [1.467862163576439, 0.0806625855239467]
+    },
+    "C4": {
+      "CP": [
+        [1, "2694", "okyeonjeongsa vr", 0.3857271373271942],
+        [2, "4383", "vlaminck vr", 0.3090575635433197],
+        [3, "1972", "inlight spark", 0.23821762204170227],
+        [4, "1839", "home tech vr", 0.15224063396453857],
+        [5, "0717", "chemistry vr", 0.14191418886184692],
+        [
+          6,
+          "2551",
+          "mysteries of china the forbidden city",
+          0.02019892819225788
+        ]
+      ],
+      "Overbroad": [
+        "non-pii",
+        "usage info",
+        "type",
+        "user id",
+        "contact",
+        "billing"
+      ]
+    },
+    "C5": {
+      "Consistency": ["information"],
+      "In-consistency": ["audio", "network", "geo location", "device info"]
+    }
+  }
+]
