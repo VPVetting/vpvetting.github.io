@@ -77,16 +77,16 @@ https://templatemo.com/tm-564-plot-listing
                         <option value="" disabled selected hidden>
                           --Please select Platform--
                         </option>
-                        <option value="0">Viveport</option>
-                        <option value="1">Microsoft</option>
-                        <option value="2">Quest</option>
-                        <option value="3">SteamVR</option>
-                        <option value="4">Go</option>
-                        <option value="5">Gear</option>
-                        <option value="6">App Lab</option>
-                        <option value="7">Rift</option>
-                        <option value="8">Sidequest</option>
-                        <option value="9">PSVR</option>
+                        <option value="Viveport">Viveport</option>
+                        <option value="Microsoft">Microsoft</option>
+                        <option value="Quest">Quest</option>
+                        <option value="SteamVR">SteamVR</option>
+                        <option value="Go">Go</option>
+                        <option value="Gear">Gear</option>
+                        <option value="App_Lab">App Lab</option>
+                        <option value="Rift">Rift</option>
+                        <option value="Sidequest">Sidequest</option>
+                        <option value="PSVR">PSVR</option>
                       </select>
                     </fieldset>
                   </div>
@@ -294,7 +294,7 @@ https://templatemo.com/tm-564-plot-listing
       function select_plat() {
         var nSel = document.getElementById("platform");
         index = nSel.selectedIndex;
-        var selected_manu = nSel[index].text;
+        var selected_manu = nSel[index].value;
         console.log("$$$$$$$");
         console.log(selected_manu);
         let request = openDB(dbName, version).then((db) => {
@@ -778,29 +778,34 @@ https://templatemo.com/tm-564-plot-listing
         vrpp_lis.push(data);
       }
       //方法三
-      $.ajax({
-        url: "./data/",
-        type: "GET",
-        dataType: "json",
-        async: false,
-        success: function (data) {
-          console.log(data);
-          for (key in data) {
-            filename = data[key];
-            $.ajax({
-              url: "./data/" + filename,
-              type: "GET",
-              dataType: "json",
-              async: false,
-              success: function (filedata) {
-                update_lis(filedata);
-              },
-            });
-          }
-          console.log("#####");
-          console.log(vrpp_lis[0][0]);
-        },
-      });
+
+      var data = [
+        "microsoftvr_app_info.json",
+        "pp_db_with_cus_cp_0262.json",
+        "pp_db_with_cus_cp_1448.json",
+        "pp_db_with_cus_cp_2603.json",
+        "pp_db_with_cus_cp_3340.json",
+        "pp_db_with_cus_cp_4565.json",
+        "sidequest_app_info.json",
+        "steamvr_app_info.json",
+        "viveport_app_info.json",
+      ];
+
+      for (i = 0; i < data.length; ++i) {
+        filename = data[i];
+        $.ajax({
+          url: "./data/" + filename,
+          type: "GET",
+          dataType: "json",
+          async: false,
+          success: function (filedata) {
+            update_lis(filedata);
+          },
+        });
+      }
+      console.log("#####");
+      console.log(vrpp_lis[0][0]);
+
       //类似于方法二
       delDB(dbName);
       initDB(dbName, version);
