@@ -52,7 +52,7 @@ https://templatemo.com/tm-564-plot-listing
         <div class="row">
           <div class="col-lg-12">
             <div class="top-text header-text">
-              <h2>VR Privacy Policy Analysis</h2>
+              <h2>VR Privacy Policy Vetting</h2>
             </div>
           </div>
           <div class="col-lg-12 align-self-center">
@@ -449,8 +449,7 @@ https://templatemo.com/tm-564-plot-listing
                           value=""
                           id="checkbox1"
                           disabled
-                  
-                          ${result_game.Specific_Audiences}
+                              ${result_game.Specific_Audiences}
                         />
                         <label class="form-check-label" for="checkbox1">
                           Specific Audiences
@@ -565,10 +564,11 @@ https://templatemo.com/tm-564-plot-listing
                 <div class="col-9">
                   <div class="rank" style="margin-left:2rem;">
                     <div class="row" style="background-color:white;border-bottom:black 1px solid;border-top-right-radius:5px;border-top-left-radius:5px;">
-                      <div class="col-md-3">gap_l</div>
-                      <div class="col-md-3">gap_u</div>
-                      <div class="col-md-3">gap_lu</div>
-                      <div class="col-md-3">bar_g</div>
+                      <div class="col-md-4"></div>
+                      <div class="col-md-2">gap_l</div>
+                      <div class="col-md-2">gap_u</div>
+                      <div class="col-md-2">gap_lu</div>
+                      <div class="col-md-2">bar_g</div>
                     </div>
                   </div>
                 </div>
@@ -738,26 +738,31 @@ https://templatemo.com/tm-564-plot-listing
         }
         var c3_cont = document.getElementsByClassName("rank")[0];
         c3_cont.innerHTML = `<div class="row" style="background-color:white;border-bottom:black 2px solid;margin-right:2rem;padding:0.5rem;border-top-right-radius:5px;border-top-left-radius:5px;">
-          <div class="col-md-3" style="text-align:center;font-weight:600;font-size:18px;" >gap_l</div>
-          <div class="col-md-3" style="text-align:center;font-weight:600;font-size:18px;">gap_u</div>
-          <div class="col-md-3" style="text-align:center;font-weight:600;font-size:18px;">gap_lu</div>
-          <div class="col-md-3" style="text-align:center;font-weight:600;font-size:18px;">bar_g</div>
+          <div class="col-md-4" style="text-align:center;font-weight:600;font-size:18px;border-right:#cccccc solid 1px;"></div>          
+          <div class="col-md-2" style="text-align:center;font-weight:600;font-size:18px;border-right:#cccccc solid 1px;">gap_l</div>
+          <div class="col-md-2" style="text-align:center;font-weight:600;font-size:18px;border-right:#cccccc solid 1px;">gap_u</div>
+          <div class="col-md-2" style="text-align:center;font-weight:600;font-size:18px;border-right:#cccccc solid 1px;">gap_lu</div>
+          <div class="col-md-2" style="text-align:center;font-weight:600;font-size:18px;">bar_g</div>
         </div>`;
         console.log(typeof result_game.C3["gap_l"][0]);
+        var c3_label = ["Value", "Percentile"];
         for (i = 0; i < 2; i++) {
           console.log(typeof result_game.C3["gap_l"][i]);
           c3_cont.innerHTML += `
           <div class="row" style="background-color:white;border-bottom:#cccccc 1px solid;margin-right:2rem;padding:0.3rem;">
-            <div class="col-md-3" style="text-align:center">${
+            <div class="col-md-4" style="text-align:center;font-weight:600;border-right:#cccccc solid 1px;">${
+              c3_label[i]
+            }</div>
+            <div class="col-md-2" style="text-align:center;border-right:#cccccc solid 1px;">${
               Math.round(result_game.C3["gap_l"][i] * 100) / 100
             }</div>
-            <div class="col-md-3" style="text-align:center">${
+            <div class="col-md-2" style="text-align:center;border-right:#cccccc solid 1px;">${
               Math.round(result_game.C3["gap_u"][i] * 100) / 100
             }</div>
-            <div class="col-md-3" style="text-align:center">${
+            <div class="col-md-2" style="text-align:center;border-right:#cccccc solid 1px;">${
               Math.round(result_game.C3["gap_lu"][i] * 100) / 100
             }</div>
-            <div class="col-md-3" style="text-align:center">${
+            <div class="col-md-2" style="text-align:center;">${
               Math.round(result_game.C3["bar_g"][i] * 100) / 100
             }</div>
           </div>`;
