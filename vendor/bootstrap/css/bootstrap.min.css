@@ -7159,7 +7159,7 @@ fieldset:disabled .btn {
 }
 
 .mt-5 {
-  margin-top: 3rem !important;
+  margin-top: -0.5rem;
 }
 
 .mt-auto {
