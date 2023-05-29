@@ -273,7 +273,7 @@ https://templatemo.com/tm-564-plot-listing
           let request = db.transaction(dbName, "readwrite").objectStore(dbName);
           console.log("initDB");
           for (i = 0; i < vrpp_lis.length; ++i) {
-            data_item = vrpp_lis[i][0];
+            data_item = vrpp_lis[i];
             result = request.add(data_item);
 
             result.onsuccess = function (e) {
@@ -345,7 +345,11 @@ https://templatemo.com/tm-564-plot-listing
         if (result_game != null) {
           tbody.innerHTML += `<h2>${result_game.name}</h2>
                 <h6>Platform: ${result_game.platform}</h6>`;
-          if (result_game.pp_link != "" && result_game.pp_link != null) {
+          if (
+            result_game.label &&
+            result_game.pp_link != "" &&
+            result_game.pp_link != null
+          ) {
             ret_cont.innerHTML += `<div class="col-lg-12">
               <div class="naccs">
                 <div class="grid">
@@ -809,17 +813,13 @@ https://templatemo.com/tm-564-plot-listing
         }
       }
       function update_lis(data) {
-        vrpp_lis.push(data);
+        vrpp_lis.push.apply(vrpp_lis, data);
       }
       //方法三
 
       var data = [
         "microsoftvr_app_info.json",
-        "pp_db_with_cus_cp_0262.json",
-        "pp_db_with_cus_cp_1448.json",
-        "pp_db_with_cus_cp_2603.json",
-        "pp_db_with_cus_cp_3340.json",
-        "pp_db_with_cus_cp_4565.json",
+        "merged_data.json",
         "sidequest_app_info.json",
         "steamvr_app_info.json",
         "viveport_app_info.json",
