@@ -779,26 +779,29 @@ https://templatemo.com/tm-564-plot-listing
         c4_cpcont[0].innerHTML = ``;
         c4_cpcont[1].innerHTML = ``;
         c4_overbroadcont.innerHTML = ``;
-        for (i = 0; i < result_game.C4["CP"].length / 2; ++i) {
-          c4_cpcont[0].innerHTML += `<li class="list-group-item">
-            <span class="badge badge-primary badge-pill" style="background-color:#78a2bc"
-              >${result_game.C4["CP"][i][1]}</span
-            >
-            ${result_game.C4["CP"][i][2]}
-          </li>`;
+        if (result_game.C4) {
+          for (i = 0; i < result_game.C4["CP"].length / 2; ++i) {
+            c4_cpcont[0].innerHTML += `<li class="list-group-item">
+              <span class="badge badge-primary badge-pill" style="background-color:#78a2bc"
+                >${result_game.C4["CP"][i][1]}</span
+              >
+              ${result_game.C4["CP"][i][2]}
+            </li>`;
+          }
+          for (i; i < result_game.C4["CP"].length; ++i) {
+            c4_cpcont[1].innerHTML += `<li class="list-group-item">
+              <span class="badge badge-primary badge-pill" style="background-color:#78a2bc"
+                >${result_game.C4["CP"][i][1]}</span
+              >
+              ${result_game.C4["CP"][i][2]}
+            </li>`;
+          }
+          for (i = 0; i < result_game.C4["Overbroad"].length; ++i) {
+            c4_overbroadcont.innerHTML += `
+            <div class="col-md-3" style="border:none;"><div class="list-box"  style="background-color:#d14662;margin-bottom=0.5rem">${result_game.C4["Overbroad"][i]}</div></div>`;
+          }
         }
-        for (i; i < result_game.C4["CP"].length; ++i) {
-          c4_cpcont[1].innerHTML += `<li class="list-group-item">
-            <span class="badge badge-primary badge-pill" style="background-color:#78a2bc"
-              >${result_game.C4["CP"][i][1]}</span
-            >
-            ${result_game.C4["CP"][i][2]}
-          </li>`;
-        }
-        for (i = 0; i < result_game.C4["Overbroad"].length; ++i) {
-          c4_overbroadcont.innerHTML += `
-          <div class="col-md-3" style="border:none;"><div class="list-box"  style="background-color:#d14662;margin-bottom=0.5rem">${result_game.C4["Overbroad"][i]}</div></div>`;
-        }
+
         c5_consis_cont = document.getElementsByName("consis-row")[0];
         c5_inconsis_cont = document.getElementsByName("inconsis-row")[0];
         c5_consis_cont.innerHTML = ``;
